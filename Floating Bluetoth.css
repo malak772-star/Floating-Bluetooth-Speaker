@@ -1,0 +1,442 @@
+/* =========================================
+   إعدادات عامة وتايبوجرافي
+   ========================================= */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Tajawal', sans-serif;
+    background-color: #000000;
+    color: white;
+    margin: 0;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+    padding-top: 80px !important;
+}
+
+h1,
+h2,
+h3,
+h4,
+p {
+    margin: 0;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* =========================================
+   تنسيقات مخصصة للألوان الفاخرة
+   ========================================= */
+
+/* تأثير النص المتدرج الفاخر (نحاسي) */
+.gradient-text {
+    background: linear-gradient(90deg, #b79461, #e1c699);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* لون نحاسي fallback */
+.text-copper-400 {
+    color: #d4ac7d;
+}
+
+/* تأثير العناوين */
+.section-title {
+    font-size: 2.5rem;
+    font-weight: 800;
+    margin-bottom: 4rem;
+}
+
+/* تأثير التوهج النحاسي */
+.copper-glow-effect {
+    position: absolute;
+    bottom: -30px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 200px;
+    height: 60px;
+    background: radial-gradient(circle, rgba(212, 172, 125, 0.3) 0%, rgba(0, 0, 0, 0) 70%);
+    filter: blur(20px);
+    z-index: 1;
+}
+
+/* =========================================
+   تنسيقات الرأس (Navbar)
+   ========================================= */
+.navbar {
+    background-color: rgba(0, 0, 0, 0.9) !important;
+    /* خلفية سوداء شفافة قليلاً */
+    backdrop-filter: blur(10px);
+    /* تأثير ضبابي خلف الهيدر */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 9999;
+    /* لضمان ظهوره فوق كل العناصر */
+    border-bottom: 1px solid rgba(183, 148, 97, 0.3);
+    /* خط نحاسي رفيع */
+    height: 80px;
+    /* تحديد ارتفاع ثابت */
+    display: flex;
+    align-items: center;
+}
+
+.navbar a {
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.logo {
+    font-size: 1.25rem;
+    font-weight: 900;
+    color: #e1c699;
+    /* نحاسي فاتح */
+    letter-spacing: 1px;
+}
+
+/* =========================================
+   تنسيقات الـ Hero Section (الأساسية)
+   ========================================= */
+.hero-section {
+    padding-top: 20px;
+    /* للتعويض عن الـ Navbar المثبت */
+    min-height: 90vh;
+    display: flex;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+@media (min-width: 768px) {
+    .hero-content {
+        align-items: flex-start;
+        text-align: right;
+    }
+}
+
+.badge {
+    display: inline-block;
+    background-color: rgba(183, 148, 97, 0.15);
+    color: #e1c699;
+    padding: 0.5rem 1.25rem;
+    border-radius: 9999px;
+    font-size: 0.8rem;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+    border: 1px solid rgba(183, 148, 97, 0.3);
+}
+
+.hero-title {
+    font-size: 2.75rem;
+    font-weight: 900;
+    line-height: 1.1;
+    margin-bottom: 1.5rem;
+}
+
+@media (min-width: 768px) {
+    .hero-title {
+        font-size: 3.75rem;
+    }
+}
+
+.hero-description {
+    color: #a1a1aa;
+    font-size: 1.1rem;
+    line-height: 1.7;
+    margin-bottom: 2.5rem;
+    max-width: 600px;
+}
+
+.hero-btns {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+    align-items: center;
+}
+
+@media (min-width: 640px) {
+    .hero-btns {
+        flex-direction: row;
+    }
+}
+
+/* =========================================
+   صورة المنتج على الجوال والكمبيوتر
+   ========================================= */
+.hero-image-container {
+    position: relative;
+    width: 100%;
+    max-width: 350px;
+    margin: 3rem auto 0;
+    /* توسيط على الجوال */
+    flex: 1;
+}
+
+@media (min-width: 768px) {
+    .hero-image-container {
+        max-width: 100%;
+        margin: 0;
+    }
+}
+
+.product-img-hero {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    border-radius: 2rem;
+    /* تم إضافة تدوير بسيط ليتناسب مع الصورة المودّلة */
+    box-shadow: 0 40px 80px -20px rgba(183, 148, 97, 0.2);
+    /* توهج نحاسي تحت الصورة */
+    position: relative;
+    z-index: 10;
+
+    /* حركية خفيفة (عائمة) */
+    animation: float 4s ease-in-out infinite;
+}
+
+/* حل مشكلة العائمة على الجوال */
+@keyframes float {
+    0% {
+        transform: translateY(0px);
+    }
+
+    50% {
+        transform: translateY(-15px);
+    }
+
+    100% {
+        transform: translateY(0px);
+    }
+}
+
+.levitation-shadow {
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60%;
+    height: 10px;
+    background: rgba(0, 0, 0, 0.5);
+    filter: blur(10px);
+    border-radius: 50%;
+    z-index: 1;
+    animation: shadowShrink 4s ease-in-out infinite;
+}
+
+@keyframes shadowShrink {
+    0% {
+        width: 60%;
+        opacity: 0.5;
+    }
+
+    50% {
+        width: 45%;
+        opacity: 0.3;
+    }
+
+    100% {
+        width: 60%;
+        opacity: 0.5;
+    }
+}
+
+/* =========================================
+   الأزرار الفاخرة
+   ========================================= */
+.btn-primary-sm {
+    background-color: #b79461;
+    color: black;
+    padding: 0.5rem 1.5rem;
+    border-radius: 9999px;
+    font-weight: bold;
+    font-size: 0.9rem;
+    transition: 0.3s;
+}
+
+.btn-primary-sm:hover {
+    background-color: white;
+    transform: scale(1.05);
+}
+
+.btn-luxury {
+    background: linear-gradient(90deg, #b79461, #e1c699);
+    color: black;
+    padding: 1rem 2rem;
+    border-radius: 12px;
+    font-weight: 800;
+    cursor: pointer;
+    transition: transform 0.3s, box-shadow 0.3s;
+    box-shadow: 0 10px 20px -5px rgba(183, 148, 97, 0.4);
+}
+
+.btn-luxury:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 15px 30px -10px rgba(183, 148, 97, 0.6);
+}
+
+.btn-outline-copper {
+    background: transparent;
+    border: 2px solid #b79461;
+    color: #e1c699;
+    padding: 1rem 2rem;
+    border-radius: 12px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.btn-outline-copper:hover {
+    background-color: rgba(183, 148, 97, 0.1);
+}
+
+/* =========================================
+   المميزات والمواصفات (بقيت متجاوبة)
+   ========================================= */
+.feature-card {
+    background-color: rgba(17, 24, 39, 0.8);
+    padding: 3rem 2rem;
+    border-radius: 24px;
+    border: 1px solid #1f2937;
+    text-align: center;
+    transition: transform 0.3s, border-color 0.3s;
+}
+
+.feature-card:hover {
+    transform: translateY(-8px);
+    border-color: #b79461;
+}
+
+.feature-card .icon-wrap {
+    font-size: 3rem;
+    margin-bottom: 2rem;
+    display: block;
+}
+
+.feature-card h3 {
+    font-size: 1.2rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    color: #f9fafb;
+}
+
+.feature-card p {
+    color: #a1a1aa;
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
+
+.spec-item {
+    font-size: 1rem;
+    border-bottom: 1px solid #1f2937;
+    padding-bottom: 1rem;
+}
+
+/* =========================================
+   التذييل والختام
+   ========================================= */
+.background-pattern {
+    position: absolute;
+    inset: 0;
+    background-image: radial-gradient(#b79461 1px, transparent 1px);
+    background-size: 30px 30px;
+    opacity: 0.03;
+}
+
+
+/* كود يضاف لملف style.css */
+
+/* إخفاء اللغة غير النشطة */
+.hidden {
+    display: none;
+}
+
+/* تنسيقات خاصة عند تفعيل اللغة الإنجليزية */
+body.en-mode {
+    direction: ltr;
+    /* تغيير الاتجاه لليسار */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    /* خط أجنبي مناسب */
+}
+
+body.en-mode .lang-ar {
+    display: none;
+}
+
+body.en-mode .lang-en {
+    display: block;
+}
+
+/* تعديل المحاذاة في الـ Hero Section */
+body.en-mode .hero-content {
+    text-align: left;
+}
+
+@media (min-width: 768px) {
+    body.en-mode .hero-section {
+        flex-direction: row;
+        /* الصورة يمين والنص يسار في الإنجليزي */
+    }
+}
+
+
+
+
+
+/* إخفاء أي عنصر يحمل كلاس hidden */
+/* .hidden {
+    display: none !important;
+} */
+
+/* تنسيق زر اللغة */
+.btn-lang {
+    background: rgba(183, 148, 97, 0.2);
+    border: 1px solid #b79461;
+    color: #e1c699;
+    padding: 5px 15px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 0.8rem;
+    transition: 0.3s;
+}
+
+.btn-lang:hover {
+    background: #b79461;
+    color: black;
+}
+
+/* عندما يكون الـ body في وضع الـ en-mode */
+body.en-mode .lang-ar {
+    display: none !important;
+}
+
+body.en-mode .lang-en {
+    display: inline-block !important;
+}
+
+body.en-mode {
+    direction: ltr;
+}
+
+
+/* لضمان بقاء زر اللغة ظاهراً دائماً */
+.btn-lang {
+    display: inline-block !important;
+}
+
+/* إصلاح مشكلة اختفاء النصوص عند التبديل */
+.lang-en.hidden,
+.lang-ar.hidden {
+    display: none !important;
+}

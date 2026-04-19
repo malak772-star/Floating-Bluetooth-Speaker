@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Orbital Sound - مكبر الصوت العائم المستقبلي</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="Floating Bluetoth.css">
+</head>
+
+<body>
+
+    <header class="navbar">
+        <div class="container flex justify-between items-center mx-auto p-5">
+            <div class="logo">ORBITAL SOUND</div>
+
+            <nav class="hidden md:flex gap-8 items-center text-gray-300">
+                <a href="#features" class="hover:text-white">
+                    <span class="lang-ar">المميزات</span>
+                    <span class="lang-en hidden">Features</span>
+                </a>
+                <a href="#specs" class="hover:text-white">
+                    <span class="lang-ar">المواصفات</span>
+                    <span class="lang-en hidden">Specs</span>
+                </a>
+                <a href="#reviews" class="hover:text-white">
+                    <span class="lang-ar">آراء العملاء</span>
+                    <span class="lang-en hidden">Reviews</span>
+                </a>
+
+                <button onclick="toggleLanguage()" id="langBtn" class="btn-lang">English</button>
+
+                <button class="btn-primary-sm">
+                    <span class="lang-ar">اطلب الآن</span>
+                    <span class="lang-en hidden">Order Now</span>
+                </button>
+            </nav>
+
+            <button class="md:hidden text-white text-2xl">☰</button>
+        </div>
+    </header>
+
+    <section class="hero-section">
+        <div class="container mx-auto px-5 py-20 flex flex-col md:flex-row items-center gap-12 relative z-10">
+
+            <div class="hero-content flex-1 text-center md:text-right">
+                <div class="badge">
+                    <span class="lang-ar">ابتكار مستقبلي</span>
+                    <span class="lang-en hidden">Future Innovation</span>
+                </div>
+
+                <h1 class="hero-title">
+                    <span class="lang-ar">تحدّى الجاذبية. عِش الموسيقى كما لم تفعل من قبل.</span>
+                    <span class="lang-en hidden">Defy Gravity. Experience Music Like Never Before.</span>
+                </h1>
+
+                <p class="hero-description">
+                    <span class="lang-ar">ارتقِ بتجربتك السمعية مع Orbital Sound، مكبر الصوت البلوتوث العائم الذي يدمج
+                        الفن بالتكنولوجيا الفائقة. صوت نقي، تصميم ساحر، وتجربة لا تُنسى.</span>
+                    <span class="lang-en hidden">Elevate your auditory experience with Orbital Sound, the floating
+                        Bluetooth speaker that merges art with high technology. Pure sound, magical design, and an
+                        unforgettable experience.</span>
+                </p>
+
+                <div class="hero-btns flex gap-4 justify-center md:justify-start">
+                    <button class="btn-luxury">
+                        <span class="lang-ar">احصل عليه الآن بخصم 30%</span>
+                        <span class="lang-en hidden">Get It Now - 30% OFF</span>
+                    </button>
+                    <button class="btn-outline-copper">
+                        <span class="lang-ar">اكتشف التكنولوجيا</span>
+                        <span class="lang-en hidden">Explore Technology</span>
+                    </button>
+                </div>
+            </div>
+
+            <div class="hero-image-container flex-1">
+                <div class="levitation-shadow"></div>
+                <img src="Floating Bluetooth Speaker.jpg" alt="Orbital Sound Floating Speaker" class="product-img-hero">
+                <div class="copper-glow-effect"></div>
+            </div>
+
+        </div>
+        <div class="dark-gradient-overlay"></div>
+    </section>
+    <section id="features" class="features-section bg-gray-950/70 py-24">
+        <div class="container mx-auto px-5">
+            <h2 class="section-title text-center">
+                <span class="lang-ar">أكثر من مجرد مكبر صوت</span>
+                <span class="lang-en hidden">More Than Just a Speaker</span>
+            </h2>
+
+            <div class="features-grid grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10">
+
+                <div class="feature-card">
+                    <div class="icon-wrap">🚀</div>
+                    <h3>
+                        <span class="lang-ar">تقنية الطفو المغناطيسي</span>
+                        <span class="lang-en hidden">Magnetic Levitation</span>
+                    </h3>
+                    <p>
+                        <span class="lang-ar">يطفو ويدور في الهواء لتقديم تجربة بصرية ساحرة وصوت محيطي 360 درجة.</span>
+                        <span class="lang-en hidden">Floats and rotates in mid-air to deliver a mesmerizing visual
+                            experience and 360° surround sound.</span>
+                    </p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="icon-wrap">🎵</div>
+                    <h3>
+                        <span class="lang-ar">صوت نقي فائق الدقة</span>
+                        <span class="lang-en hidden">Hi-Fi Pure Sound</span>
+                    </h3>
+                    <p>
+                        <span class="lang-ar">هندسة صوتية متقدمة مع مشغلات نحاسية تمنحك بيس عميق وتفاصيل
+                            كريستالية.</span>
+                        <span class="lang-en hidden">Advanced acoustic engineering with copper drivers providing deep
+                            bass and crystal-clear details.</span>
+                    </p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="icon-wrap">🔋</div>
+                    <h3>
+                        <span class="lang-ar">بطارية تدوم 12 ساعة</span>
+                        <span class="lang-en hidden">12-Hour Battery Life</span>
+                    </h3>
+                    <p>
+                        <span class="lang-ar">استمتع بموسيقاك طوال اليوم دون انقطاع، مع قاعدة شحن لاسلكية سريعة.</span>
+                        <span class="lang-en hidden">Enjoy your music all day without interruption, with a fast wireless
+                            charging base.</span>
+                    </p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="icon-wrap">✨</div>
+                    <h3>
+                        <span class="lang-ar">تصميم عصري فاخر</span>
+                        <span class="lang-en hidden">Luxury Modern Design</span>
+                    </h3>
+                    <p>
+                        <span class="lang-ar">مزيج مثالي من اللون الأسود المطفأ والنحاس اللامع ليناسب أي ديكور
+                            راقٍ.</span>
+                        <span class="lang-en hidden">A perfect blend of matte black and polished copper to suit any
+                            upscale decor.</span>
+                    </p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+    <script>
+
+
+        function toggleLanguage() {
+            const body = document.body;
+            const btn = document.getElementById('langBtn');
+
+            // تبديل الكلاس en-mode على الجسم (body)
+            body.classList.toggle('en-mode');
+
+            // تغيير نص الزر وتغيير جميع النصوص اللي واخده الكلاسات دي
+            if (body.classList.contains('en-mode')) {
+                btn.innerText = 'العربية';
+                // البحث عن كل العناصر اللي المفروض تختفي أو تظهر
+                document.querySelectorAll('.lang-en').forEach(el => el.classList.remove('hidden'));
+                document.querySelectorAll('.lang-ar').forEach(el => el.classList.add('hidden'));
+            } else {
+                btn.innerText = 'English';
+                document.querySelectorAll('.lang-ar').forEach(el => el.classList.remove('hidden'));
+                document.querySelectorAll('.lang-en').forEach(el => el.classList.add('hidden'));
+            }
+        }
+    </script>
+</body>
+
+</html>
